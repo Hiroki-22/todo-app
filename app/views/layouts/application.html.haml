@@ -9,6 +9,5 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
   %body
-    %p.notice= notice
-    %p.alert= alert
+    = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }
     = yield
