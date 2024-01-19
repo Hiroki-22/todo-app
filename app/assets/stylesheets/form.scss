@@ -1,0 +1,51 @@
+input, select {
+  &.text {
+    width: 362px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #F4F4F4;
+    box-sizing: border-box;
+    margin: 0 28px ;
+    border: none;
+  }
+
+  &.button {
+    width: 362px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #F8BD1C;
+    color: #FFF;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 424px 28px 0;
+    border: none;
+  }
+}
+
+label {
+  color: #000;
+  font-family: Avenir;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 28px;
+}
+
+textarea {
+  width: 100%;
+  margin: 8px 0px;
+  padding: 8px 8px;
+  min-height: 440px;
+  resize: vertical;
+  border: 1px solid #EBEBEB;
+}
+
+.field {
+  margin: 33px 0;
+}

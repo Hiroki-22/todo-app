@@ -8,9 +8,6 @@
       = f.email_field :email, autofocus: true, autocomplete: "email", class: 'text'
     .field
       = f.label :password
-      - if @minimum_password_length
-        %em
-          (#{@minimum_password_length} characters minimum)
       %br/
       = f.password_field :password, autocomplete: "new-password", class: 'text'
     .field
@@ -18,5 +15,4 @@
       %br/
       = f.password_field :password_confirmation, autocomplete: "new-password", class: 'text'
     .actions
-      = f.submit "Sign up"
-  = render "devise/shared/links"
+      = f.submit "Sign up", class: 'button'
