@@ -10,4 +10,6 @@
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
   %body
     = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }
+    %p.notice= notice
+    %p.alert= alert
     = yield
