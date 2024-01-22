@@ -1,4 +1,32 @@
 @import 'form';
+@import 'header';
+
+html {
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-size: 1em;
+}
+
+.container {
+  padding: 16px 16px;
+  width: 100%;
+}
 
 h2 {
   color: #000;
@@ -11,4 +39,5 @@ h2 {
   padding-right: 91px;
   align-items: center;
   margin-left: 26px;
+  margin-top: 17px;
 }
