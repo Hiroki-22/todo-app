@@ -8,7 +8,7 @@ class BoardsController < ApplicationController
   end
 
   def create
-    @board= current_user.boards.build(board_params)
+    @board = current_user.boards.build(board_params)
     if @board.save
     else
       render :new

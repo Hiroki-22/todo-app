@@ -12,17 +12,10 @@ $avatar-size: 32px;
   &_heart {
     display: flex;
 
-    img {
-      width: $heart-size;
-      height: $heart-size;
-    }
-
     span {
       margin-left: 8px;
       font-size: 12px;
       font-weight: bold;
-      color: $primary-color;
-      line-height: $heart-size;
     }
   }
 
