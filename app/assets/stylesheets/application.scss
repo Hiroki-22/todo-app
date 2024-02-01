@@ -1,5 +1,7 @@
 @import 'form';
 @import 'header';
+@import 'buttons';
+@import 'flash';
 
 html {
   word-spacing: 1px;
@@ -24,7 +26,6 @@ body {
 }
 
 .container {
-  padding: 16px 16px;
   width: 100%;
 }
 
