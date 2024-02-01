@@ -1,4 +1,7 @@
 .container
+  %ul
+    - @board.errors.full_messages.each do |message|
+      %li= message
   .new_board_title
     %h2 New Board
   = form_with(model: @board, url: boards_path, method: 'post', local:true) do |f|
