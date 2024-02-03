@@ -1,6 +1,7 @@
 @import 'form';
 @import 'header';
 @import 'buttons';
+@import 'card';
 @import 'flash';
 
 html {
@@ -25,7 +26,13 @@ body {
   font-size: 1em;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .container {
+  padding: 16px 16px;
   width: 100%;
 }
 
@@ -39,6 +46,6 @@ h2 {
   display: inline-flex;
   padding-right: 91px;
   align-items: center;
-  margin-left: 26px;
+  margin-left: 20px;
   margin-top: 17px;
 }
