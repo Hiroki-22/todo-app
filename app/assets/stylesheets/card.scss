@@ -39,15 +39,21 @@ $avatar-size: 32px;
 
   &_detail {
     padding-top: 12px;
-    cursor: pointer;
     display: flex;
     font-size: 10px;
+    position: relative;
 
     img {
-      width: $avatar-size;
-      height: $avatar-size;
+      width: 24px;
+      height: 6px;
       border-radius: 100%;
       margin-right: 8px;
+      cursor: pointer;
+    }
+
+    &_actions {
+      right: 44px;
+      position: absolute;
     }
   }
 
