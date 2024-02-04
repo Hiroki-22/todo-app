@@ -1,7 +1,7 @@
 .container
-  %h2 All Boards
-  - @boards.each do |board|
-    = link_to board_path(board) do
+  %h2 Brackets
+  -# - @boards.each do |board|
+  -#   = link_to board_path(board) do
       .card
         -# - if board.eyecatch.attached?
           .card_image
@@ -21,4 +21,4 @@
   = link_to new_board_path do
     .new_card
       .new_card_title
-        %p + Add new board
+        %p + Add new card
