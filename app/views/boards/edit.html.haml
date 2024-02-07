@@ -1,1 +1,17 @@
-%p edit
+.container
+  %ul
+    - @board.errors.full_messages.each do |message|
+      %li= message
+  = form_with(model: @board, url: board_path(@board), method: 'put', local:true) do |f|
+    .new_board_area
+      .new_board_label
+        = f.label :title, 'Name'
+      %div
+        = f.text_field :title, class: 'text'
+    .new_board_area
+      .new_board_label
+        = f.label :content, 'Description'
+      %div
+        = f.text_area :content
+    .new_board_button
+      = f.submit 'Submit', class: 'button'
