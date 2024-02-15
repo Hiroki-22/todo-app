@@ -3,12 +3,13 @@
   - @boards.each do |board|
     .card
       .card_container
-        .card_detail_actions
-          .dropdown
-            = image_tag 'action.svg', class: 'dropbtn'
-            .dropdown-content.mini
-              = link_to 'Edit', edit_board_path(board)
-              %a{href: "#"} Delete
+        - if user_signed_in? && current_user.has_written?(board)
+          .card_detail_actions
+            .dropdown
+              = image_tag 'action.svg', class: 'dropbtn'
+              .dropdown-content.mini
+                = link_to 'Edit', edit_board_path(board)
+                = link_to 'Delete', board_path(board), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？'}
       = link_to board_path(board) do
         .card_title
           = board.title
