@@ -15,7 +15,7 @@
       .dropdown
         = image_tag 'default-avatar.png', class: 'header_avatar dropbtn'
         .dropdown-content
-          %a{href: "#"} プロフィール
+          = link_to 'プロフィール', profile_path
           = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }
     - if flash.present?
       .flash
