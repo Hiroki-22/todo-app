@@ -1,1 +1,31 @@
-Edit
+.container
+  %ul
+    - @profile.errors.full_messages.each do |message|
+      %li= message
+
+  = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
+    .new_board_area
+      .new_board_label
+        = f.label :nickname, 'ハンドルネーム'
+      %div
+        = f.text_field :nickname, class: 'text'
+    .new_board_area
+      .new_board_label
+        = f.label :introduction, '自己紹介'
+      %div
+        = f.text_area :introduction
+      .new_board_area
+        = f.label :gender, '性別'
+      %div
+        = f.select :gender, Profile.genders.keys, {}, { class: 'text' }
+    .new_board_area
+      %div
+        = f.label :birthday, '生年月日'
+      %div
+        = f.date_field :birthday, class: 'text'
+    .new_board_area
+      %div
+        = f.label :subscirbed, '通知を受け取る'
+        = f.check_box :subscirbed
+    .profile_action
+      = f.submit '保存', class: 'button'
