@@ -23,6 +23,10 @@ input, select {
     border: none;
     margin-top: auto;
   }
+
+  &.file {
+    margin-left: 20px;
+  }
 }
 
 label {
@@ -70,4 +74,11 @@ textarea {
 
 .new_board_area {
   margin-top: 33px;
+}
+
+.profile_action {
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+	align-items: center;
 }
