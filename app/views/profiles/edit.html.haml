@@ -4,6 +4,10 @@
       %li= message
 
   = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
+    .new_board_label
+      = f.label :avatar, 'アバター'
+    .new_board_label
+      = f.file_field :avatar, class: 'file'
     .new_board_area
       .new_board_label
         = f.label :nickname, 'ハンドルネーム'

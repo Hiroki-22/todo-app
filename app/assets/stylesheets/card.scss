@@ -1,7 +1,7 @@
 @import './variables';
 
 $heart-size: 16px;
-$avatar-size: 32px;
+$avatar-size: 30px;
 
 .card {
   width: 362px;
@@ -45,10 +45,10 @@ $avatar-size: 32px;
     position: relative;
 
     img {
-      width: 24px;
-      height: 6px;
+      width: $avatar-size;
+      height: $avatar-size;
       border-radius: 100%;
-      margin-right: 8px;
+      margin: 16px 0 0 16px;
       cursor: pointer;
     }
 
