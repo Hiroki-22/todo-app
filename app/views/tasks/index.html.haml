@@ -1,0 +1,14 @@
+= form_with(model: @task, url: board_tasks_path(@board), local:true) do |f|
+  .container
+    %h2 Brackets
+    - @tasks.each do |task|
+      .card
+        .card_content
+          .card_title
+            = task.title
+          .card_text
+            = task.content
+    = link_to new_board_task_path do
+      .new_card
+        .new_card_title
+          %p + Add new board

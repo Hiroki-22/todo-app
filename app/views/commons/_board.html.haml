@@ -7,7 +7,7 @@
           .dropdown-content.mini
             = link_to 'Edit', edit_board_path(board)
             = link_to 'Delete', board_path(board), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？'}
-  = link_to board_path(board) do
+  = link_to board_tasks_path(board) do
     .card_title
       = board.title
     .card_content

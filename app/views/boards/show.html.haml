@@ -1,23 +1,13 @@
 .container
   %h2 Brackets
-  -# - @boards.each do |board|
-  -#   = link_to board_path(board) do
-      .card
-        -# - if board.eyecatch.attached?
-          .card_image
-            = image_tag article.eyecatch
-        .card_container
-          .card_title
-            = board.title
-          .card_content
-            = board.content
-          -# .card_heart
-            = image_tag 'heart.svg'
-          -# .card_detail
-            = image_tag article.user.avatar_image
-            %div
-              %p= article.author_name
-              %p= article.display_created_at
+  - @tasks.each do |task|
+    .card
+      .card_content
+        .card_title
+          = task.title
+        .card_text
+          = task.content
+
   = link_to new_board_path do
     .new_card
       .new_card_title
