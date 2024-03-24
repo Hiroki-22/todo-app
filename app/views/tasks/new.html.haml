@@ -6,6 +6,10 @@
     %h2 New Card
   = form_with(model: @task, url: board_tasks_path, method: 'post', local:true) do |f|
     .new_board_area
+      = f.label :eyecatch, 'Eyecatch'
+    .new_board_label
+      = f.file_field :eyecatch, class: 'file'
+    .new_board_area
       .new_board_label
         = f.label :title, 'Name'
       %div

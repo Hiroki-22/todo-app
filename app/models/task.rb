@@ -21,6 +21,8 @@
 #  fk_rails_...  (board_id => boards.id)
 #
 class Task < ApplicationRecord
+  has_one_attached :eyecatch
+
   validates :title, presence:true
   validates :title, length: { minimum: 2, maximum: 100}
   validates :title, format: { with: /\A(?!\@)/ }
