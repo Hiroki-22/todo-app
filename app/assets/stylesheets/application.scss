@@ -5,6 +5,7 @@
 @import 'flash';
 @import 'common';
 @import 'profile';
+@import 'task';
 
 html {
   word-spacing: 1px;
@@ -40,9 +41,7 @@ a {
 
 h2 {
   color: #000;
-  font-family: Avenir;
   font-size: 26px;
-  font-style: normal;
   font-weight: 800;
   line-height: normal;
   display: inline-flex;

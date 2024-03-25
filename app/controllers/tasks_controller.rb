@@ -6,6 +6,10 @@ class TasksController < ApplicationController
     @tasks = @board.tasks.all
   end
 
+  def show
+    @task = Task.find(params[:id])
+  end
+
   def new
     @task = current_user.tasks.build(board_id: params[:board_id])
   end
