@@ -1,1 +1,7 @@
-%p show
+.task
+  %h1.task_title= @task.title
+  - if @task.eyecatch.attached?
+    .task_image
+      = image_tag @task.eyecatch
+  .task_content
+    = @task.content
