@@ -2,16 +2,17 @@
   .container
     %h2 Brackets
     - @tasks.each do |task|
-      .card
-        - if task.eyecatch.attached?
-          .card_image
-            = image_tag task.eyecatch
-        .card_task_title
-          = task.title
-        .card_content
-          = task.content
-        .card_detail
-          = image_tag task.user.avatar_image
+      = link_to board_task_path(board_id: @board, id: task.id) do
+        .card
+          - if task.eyecatch.attached?
+            .card_image
+              = image_tag task.eyecatch
+          .card_task_title
+            = task.title
+          .card_content
+            = task.content
+          .card_detail
+            = image_tag task.user.avatar_image
     = link_to new_board_task_path do
       .new_card
         .new_card_title
