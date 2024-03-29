@@ -24,6 +24,11 @@ $avatar-size: 30px;
     text-align: left;
     opacity: 0.4;
     margin-bottom: 34px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow-wrap:break-word;
   }
 
   &_heart {
@@ -80,6 +85,9 @@ $avatar-size: 30px;
   &_task_title {
     font-size: 18px;
     font-weight: 800;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 

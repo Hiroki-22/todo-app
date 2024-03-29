@@ -25,6 +25,10 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+    @task = current_user.tasks.find(params[:id])
+  end
+
   private
   def task_params
     params.require(:task).permit(:title, :content, :eyecatch)
