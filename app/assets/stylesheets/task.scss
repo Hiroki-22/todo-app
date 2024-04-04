@@ -12,6 +12,7 @@ $container-padding: 20px;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    margin-top: 24px;
 
     img {
       position: absolute;
@@ -34,7 +35,7 @@ $container-padding: 20px;
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 80%;
-    margin: 16px 0 32px 0;
+    display: inline-block;
   }
 
   &_comment {
@@ -42,10 +43,10 @@ $container-padding: 20px;
   }
 
   &_detail {
-    padding-top: 10px;
     display: flex;
     font-size: 12px;
     position: relative;
+
 
     img {
       cursor: pointer;
@@ -56,17 +57,21 @@ $container-padding: 20px;
     }
 
     &_actions {
-    right: 0px;
-    position: absolute;
+      padding-top: 3px;
+      right: 50px;
+      position: absolute;
+      display: inline-block;
     }
   }
 
   &_content {
     background: #F4F4F4;
     border-radius: 10px;
-    margin-top: 35px;
+    margin-top: 30px;
     position: relative;
     padding: 16px;
     font-size: 14px;
+    width: 100%;
+    overflow-wrap:break-word;
   }
 }

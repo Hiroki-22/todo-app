@@ -1,0 +1,23 @@
+.container
+  %ul
+    - @task.errors.full_messages.each do |message|
+      %li= message
+  .new_board_title
+    %h2 New Card
+  = form_with(model: @task, url: board_task_path(@task), method: 'put', local:true) do |f|
+    .new_board_area
+      = f.label :eyecatch, 'Eyecatch'
+    .new_board_label
+      = f.file_field :eyecatch, class: 'file'
+    .new_board_area
+      .new_board_label
+        = f.label :title, 'Name'
+      %div
+        = f.text_field :title, class: 'text'
+    .new_board_area
+      .new_board_label
+        = f.label :content, 'Description'
+      %div
+        = f.text_area :content
+    .new_board_button
+      = f.submit 'Submit', class: 'button'

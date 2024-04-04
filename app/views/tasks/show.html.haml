@@ -1,5 +1,12 @@
 .task
   %h1.task_title= @task.title
+  - if user_signed_in? && current_user.has_written?(@task)
+    .task_detail_actions
+      .dropdown
+        = image_tag 'action.svg', class: 'dropbtn'
+        .dropdown-content.mini
+          = link_to 'Edit', edit_board_task_path(@task)
+          -# = link_to 'Delete', board_path(board), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？'}
   - if @task.eyecatch.attached?
     .task_image
       = image_tag @task.eyecatch
