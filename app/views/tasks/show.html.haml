@@ -12,3 +12,9 @@
       = image_tag @task.eyecatch
   .task_content
     = @task.content
+  .comment_title
+    %p Comment
+  = link_to new_board_task_comment_path(task_id: @task.id) do
+    .new_comment_card
+      .new_comment_card_title
+        %p + Add new comment

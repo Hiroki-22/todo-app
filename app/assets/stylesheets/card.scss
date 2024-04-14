@@ -104,3 +104,17 @@ $avatar-size: 30px;
   line-height: 161px;
   text-align: center;
 }
+
+.new_comment_card {
+  height: 56px;
+  border-radius: 10px;
+  margin: 26px 0 0 8px;
+  cursor: pointer;
+  border: 1px dashed #00000033
+}
+
+.new_comment_card_title {
+  font-size: 18px;
+  line-height: 56px;
+  text-align: center;
+}
