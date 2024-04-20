@@ -13,6 +13,8 @@ ja:
       task:
         title: 'Name'
         content: 'Description'
+      comment:
+        content: 'Comment'
   date:
     abbr_day_names:
     - 日
