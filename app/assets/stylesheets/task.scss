@@ -39,7 +39,15 @@ $container-padding: 20px;
   }
 
   &_comment {
-    padding: 12px 0;
+    display: flex;
+    margin: 32px 0;
+    height: 55px;
+    font-size: 14px;
+    gap: 12px;
+
+    &_avatar {
+      padding-top: 12px;
+    }
   }
 
   &_detail {

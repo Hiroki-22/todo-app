@@ -14,6 +14,11 @@
     = @task.content
   .comment_title
     %p Comment
+  - @comments.each do |comment|
+    .task_comment
+      .task_comment_avatar
+        = image_tag comment.user.avatar_image, class: 'header_avatar dropbtn'
+      %p= comment.content
   = link_to new_board_task_comment_path(task_id: @task.id) do
     .new_comment_card
       .new_comment_card_title
