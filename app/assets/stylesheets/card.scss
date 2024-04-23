@@ -42,9 +42,9 @@ $avatar-size: 30px;
   }
 
   &_detail {
-    display: flex;
     font-size: 10px;
     bottom: 12px;
+    position: absolute;
 
     img {
       width: $avatar-size;
@@ -88,6 +88,20 @@ $avatar-size: 30px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  &_comments_count {
+    display: flex;
+    font-size: 14px;
+    justify-content: flex-end;
+    span {
+      opacity: 0.2;
+    }
+  }
+
+  &_commenter_icon {
+    float: left;
+    margin-right:-8px;
   }
 }
 

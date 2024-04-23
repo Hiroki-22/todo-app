@@ -34,4 +34,12 @@ class Task < ApplicationRecord
   belongs_to :user
   belongs_to :board
   has_many :comments, dependent: :destroy
+
+  def comment_count
+    comments.count
+  end
+
+  def last_three_commenters
+    comments.last(3).map(&:user).uniq.last(3)
+  end
 end
