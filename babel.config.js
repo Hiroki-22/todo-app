@@ -42,7 +42,7 @@ module.exports = function(api) {
       isTestEnv && 'babel-plugin-dynamic-import-node',
       '@babel/plugin-transform-destructuring',
       [
-        '@babel/plugin-proposal-class-properties',
+        '@babel/plugin-transform-class-properties',
         {
           loose: true
         }
@@ -51,6 +51,18 @@ module.exports = function(api) {
         '@babel/plugin-proposal-object-rest-spread',
         {
           useBuiltIns: true
+        }
+      ],
+      [
+        '@babel/plugin-transform-private-methods',
+        {
+          loose: true
+        }
+      ],
+      [
+        '@babel/plugin-transform-private-property-in-object',
+        {
+          loose: true
         }
       ],
       [
